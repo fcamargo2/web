@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil Interactivo Personal</title>
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            color: hwb(254 41% 16%);
+        }
+        h2 {
+            color: #000;
+        }
+        .section {
+            background-color: #e0f7fa; 
+            margin: 20px auto;
+            padding: 20px;
+            width: 50%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: hsl(266, 88%, 51%);
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+        button:hover {
+            background-color: hsl(207, 12%, 86%);
+        }
+        .comments {
+            margin-top: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 60px;
+            margin-top: 10px;
+        }
+        .opciones {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mi Perfil Personal Interactivo</h1>
+    <div class="section">
+        <h2>Datos Personales 😉</h2>
+        <p><strong>Nombre:</strong> Frey Alexander Camargo Pallares</p>
+        <p><strong>Edad:</strong> 22 años</p>
+        <p><strong>Color Favorito:</strong> Negro y Rojo</p>
+        <p><strong>Intereses:</strong> Videojuegos</p>
+        <p><strong>Genero De Pelicula Favorito:</strong> Ciencia Ficcion, Terror</p>
+        <p><strong>Comida Favorita:</strong> Pizza y Espaguetti</p>
+        <p><strong>Pasatiempos:</strong> hacer gimnasia, leer libros, salir a caminar</p>
+    </div>
+
+    <div class="section">
+        <h2>Conoceme Un Poco 😏</h2>
+        <ul>
+            <li>Me gusta mucho leer.</li>
+            <li>Me gusta mucho dibujar.</li>
+            <li>Soy amistoso y amable.</li>
+            <li>Mi sueño es tener mi hogar y mi familia.</li>
+        </ul>
+        <button onclick="alert('¡Gracias por leer!')">💕 Me gusta</button>
+    </div>
+
+    <div class="section">
+        <h2>Mi Lema de Vida 👍</h2>
+        <p>"La vida es una coleccion de momentos."</p>
+        <button onclick="alert('¡Excelente Lema!')">💬 Comentar</button>
+    </div>
+
+    <div class="section">
+        <h2>Comentarios ✉️</h2>
+        <textarea placeholder="Comenta"></textarea>
+        <button>Enviar Comentario</button>
+    </div>
+
+    <div class="section">
+        <h2> 🥳Adivina Mi Película de Ciencia Ficcion Favorita</h2>
+        <div class="opciones">
+            <button onclick="verificarPelicula('Star Wars')">Star Wars</button>
+            <button onclick="verificarPelicula('Terminator')">Terminator</button>
+            <button onclick="verificarPelicula('Alien')">Alien</button>
+            <button onclick="verificarPelicula('Interestelar')">Interestelar</button>
+        </div>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function verificarPelicula(pelicula) {
+            const respuestaCorrecta = "Star Wars";
+            
+            if (pelicula === respuestaCorrecta) {
+                document.getElementById('resultado').innerText = "Adivinasteee!!! 🥸 Mi película favorita es: " + pelicula;
+            } else {
+                document.getElementById('resultado').innerText = "Mi película favorita no es 😒 " + pelicula;
+            }
+        }
+    </script>
+    <div class="section">
+        <h2>Gracias Por Leer ❤️</h2>
+        <img src="monitocute.jpg" style="max-width:100%; height:auto;">
+    </div>
+    
+</body>
+</html>
